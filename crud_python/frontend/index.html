@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="/frontend/style.css">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Sistema de Crud</h1>
+    <h1>CRUD Application</h1>
+ 
+    <!-- Formulário para adicionar usuário -->
     <form id="userForm">
-        <input type="text"      name="nome"     placeholder="Nome"      id="name" required>
-        <input type="email"     name="email"    placeholder="Email"     id="email" required>
-        <input type="number"    name="age"      placeholder="Idade"     id="age" required>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="age" placeholder="Age" required>
         <button type="submit">Cadastrar</button>
     </form>
-
+ 
+    <!-- Formulário para atualizar usuário -->
+    <form id="updateForm" style="display: none;">
+        <input type="hidden" id="updateId">
+        <input type="text" id="updateName" placeholder="Name" required>
+        <input type="email" id="updateEmail" placeholder="Email" required>
+        <input type="number" id="updateAge" placeholder="Age" required>
+        <button type="submit">Update User</button>
+    </form>
+ 
+    <!-- Tabela de usuários -->
     <table>
         <thead>
             <tr>
-                <th>Nome</th>
+                <th>Name</th>
                 <th>Email</th>
-                <th>Idade</th>
-                <th>Botões</th>
+                <th>Age</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody id="userTable"></tbody>
     </table>
-
-<script src="script.js"></script>
+ 
+    <script src="script.js"></script>
 </body>
 </html>
+ 
