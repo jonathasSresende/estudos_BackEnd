@@ -11,18 +11,31 @@
         <input type="text" name="" id="name" placeholder="Nome">
         <button type="submit">cadastrar</button>
     </form>
-
+ 
+ 
+ 
+    <hr>
+    <form id="updateForm" style="display: none;">
+        <input type="text" name="name" id="idUpdate" placeholder="id">
+        <input type="text" name="name" id="nameUpdate" placeholder="Nome">
+        <button type="submit">Atualizar</button>
+    </form>
+ 
     <table>
-        <tr>
-            <th>id</th>
-            <th>nome</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>nome</th>
+                <th>botões</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela">
+        </tbody>
+<!-- aqui vai vir as coisas da api -->
     </table>
-
-    <tbody id="corpoTabela">
-
-    </tbody>
-<script src="script.js"></script>
+ 
+ 
+ 
+    <script src="script.js"></script>
    
 </body>
 </html>
